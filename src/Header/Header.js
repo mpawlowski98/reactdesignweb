@@ -51,7 +51,7 @@ function Header() {
     const infoText = document.querySelector(`.${css.infotext}`);
     infoText.style.position = 'relative';
     infoText.style.zIndex = '3';
-    infoText.style.top = '-125%';
+    infoText.style.top = '-100%';
     function createParticles() {
       for (let i = 0; i < 100; i++) {
         particles.push(new Particle());
