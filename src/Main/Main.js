@@ -168,7 +168,7 @@ function Main() {
                   CoinFlip [HTML, CSS, JS]
                 </a>
                 <a
-                  href="https:/mpawlowski98.github.io/Wheel-and-cross/"
+                  href="https://mpawlowski98.github.io/Wheel-and-cross/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={css.gameLink}
