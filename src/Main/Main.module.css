@@ -1,0 +1,313 @@
+#about,
+#features {
+  background-color: #47316b;
+  padding: 40px;
+}
+
+#about .header,
+#features .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#about .header h1,
+#features .header h1 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#about .header a,
+#features .header a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 12px 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#about .header a:hover,
+#features .header a:hover {
+  border-color: #fff;
+  box-shadow: none;
+}
+
+#about .card,
+#features .card {
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  display: flex;
+  gap: 35px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+#about .card:hover,
+#features .card:hover {
+  border-color: #fff;
+  box-shadow: none;
+}
+#about .card img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#about .card .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#about .card .info h1,
+#features .card .info h1 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Ubuntu';
+}
+
+#about .card .info p,
+#features .card .info p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+#about .card .info span,
+#features .card .info span {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  margin-bottom: 20px;
+}
+#features .featurescards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+#features .featurescards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+#features .featurescards .card .info i {
+  color: #fff;
+  font-size: 8rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+#features .featurescards .card .info h1 {
+  text-align: center;
+}
+
+#features .featurescards .card .info p {
+  font-size: 1.3rem;
+  margin-bottom: 28px;
+}
+
+.modal {
+  position: fixed;
+  top: 25%;
+  left: 10%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  min-height: 450px;
+  background-color: #461d57;
+  border: 1px solid transparent;
+  border-radius: 5%;
+  transform-origin: center center;
+  transform: scale(1);
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  z-index: 5;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalcontact {
+  position: fixed;
+  top: 25%;
+  left: 10%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  min-height: 300px;
+  background-color: #461d57;
+  border: 1px solid transparent;
+  border-radius: 5%;
+  transform-origin: center center;
+  transform: scale(1);
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  z-index: 5;
+}
+.modalcontactcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.contacttitle {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Ubuntu';
+}
+.contactmail {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.close,
+.closemodal {
+  top: 5%;
+  right: 5%;
+  position: absolute;
+  cursor: pointer;
+  color: #fff;
+}
+
+.gameLink {
+  text-decoration: none;
+  background-color: #47316b;
+  color: black;
+  padding: 18px 0px;
+  border: 1px solid transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  width: 80%;
+  margin-top: 13px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Ubuntu';
+}
+.gameLink:hover,
+.gameLink:focus {
+  border-color: #fff;
+  box-shadow: none;
+}
+
+.modalcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+.gameLink2 {
+  text-decoration: none;
+  background-color: #47316b;
+  font-size: 1.4rem;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 12px 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-family: 'Ubuntu';
+  cursor: pointer;
+}
+.gameLink2:hover,
+.gameLink2:focus {
+  border-color: #fff;
+  box-shadow: none;
+}
+.gameLink3 {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 12px 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Ubuntu';
+}
+
+.gameLink3:hover,
+.gameLink3:focus {
+  border-color: #fff;
+  box-shadow: none;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+  header .infotext h1 {
+    font-size: 4rem;
+  }
+  header .infotext h3 {
+    font-size: 1.1rem;
+  }
+
+  #about .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .card img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .modal {
+    width: 50%;
+    left: 25%;
+  }
+  .modalcontact {
+    width: 40%;
+    left: 30%;
+  }
+  #features .featurescards .card {
+    min-width: 350px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modalcontact {
+    width: 25%;
+    left: 37%;
+  }
+}
