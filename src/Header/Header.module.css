@@ -54,7 +54,7 @@ header .infotext h3 {
 
 header .infotext .scroll {
   position: absolute;
-  bottom: 24%;
+  bottom: 20%;
   left: 50%;
   color: #fff;
   transform: translate(0, -50%);
