@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -8,12 +8,13 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Releway", sans-serif;
+  font-family: 'Releway', sans-serif;
 }
 
 body {
   font-size: 14px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 header {
@@ -43,7 +44,7 @@ header .infotext {
 header .infotext h1 {
   font-size: 5rem;
   font-weight: 500;
-  font-family: "Ubuntu";
+  font-family: 'Ubuntu';
 }
 
 header .infotext h3 {
@@ -69,7 +70,7 @@ header .infotext .scroll::before {
   top: -10px;
   left: -11px;
   z-index: -1;
-  content: "";
+  content: '';
   width: 44px;
   height: 44px;
   box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
