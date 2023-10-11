@@ -205,7 +205,12 @@ function Main() {
             </span>
             <div className={css.modalcontactcontainer}>
               <p className={css.contacttitle}>Contact:</p>
-              <p className={css.contactmail}>Email: mpawlowski98@interia.pl</p>
+              <a
+                href="mailto: mpawlowski98@interia.pl"
+                className={css.contactmail}
+              >
+                Email: mpawlowski98@interia.pl
+              </a>
               <a
                 href="https://www.linkedin.com/in/micha%C5%82-piotr-paw%C5%82owski/"
                 className={css.gameLink3}
