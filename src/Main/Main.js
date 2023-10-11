@@ -207,9 +207,9 @@ function Main() {
               <p className={css.contacttitle}>Contact:</p>
               <a
                 href="mailto: mpawlowski98@interia.pl"
-                className={css.contactmail}
+                className={css.gameLink3}
               >
-                Email: mpawlowski98@interia.pl
+                Napisz do mnie
               </a>
               <a
                 href="https://www.linkedin.com/in/micha%C5%82-piotr-paw%C5%82owski/"
