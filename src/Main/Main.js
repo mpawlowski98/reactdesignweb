@@ -29,7 +29,7 @@ function Main() {
         <div className={css.header}>
           <h1>About Me</h1>
           <button
-            className={css.gameLink2}
+            className={`${css.gameLink2} ${css.btnanimation}`}
             id={css.hireme}
             onClick={openModalContact}
           >
@@ -59,7 +59,11 @@ function Main() {
       <section id={css.features}>
         <div className={css.header}>
           <h1>Projects</h1>
-          <button className={css.gameLink2} id={css.myCard} onClick={openModal}>
+          <button
+            className={`${css.gameLink2} ${css.btnanimation}`}
+            id={css.myCard}
+            onClick={openModal}
+          >
             See More
           </button>
         </div>

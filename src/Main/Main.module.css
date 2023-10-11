@@ -242,6 +242,16 @@
   border-color: #fff;
   box-shadow: none;
 }
+
+.btnanimation::before {
+  content: '';
+  background-color: red;
+  transform: scaleX(0);
+}
+.btnanimation:hover::before {
+  transform: scaleX(1);
+}
+
 .gameLink3 {
   text-decoration: none;
   font-size: 1.4rem;
