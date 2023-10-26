@@ -1,14 +1,15 @@
 #contact {
-  background-color: #151318;
+  background-color: #030308;
   padding: 20px;
 }
 
 .footer {
-  background-color: #151318;
+  background-color: #030308;
   height: 13vh;
 }
 .gameLink3 {
   text-decoration: none;
+  background-color: #012752;
   font-size: 1.4rem;
   color: #fff;
   border: 1px solid transparent;
@@ -24,7 +25,7 @@
 
 .gameLink3:hover,
 .gameLink3:focus {
-  border-color: #fff;
+  border-color: #0350a8;
   box-shadow: none;
 }
 
@@ -41,7 +42,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #151318;
+  background-color: #012752;
   color: #fff;
   border: 1px solid transparent;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -53,6 +54,6 @@
 }
 
 .scrolltop:hover {
-  border-color: #fff;
+  border-color: #0350a8;
   box-shadow: none;
 }
