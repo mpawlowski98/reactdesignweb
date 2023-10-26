@@ -1,6 +1,6 @@
 #about,
 #features {
-  background-color: #47316b;
+  background-color: #151318;
   padding: 40px;
 }
 
@@ -127,7 +127,7 @@
   transform: translate(-50%, -50%);
   width: 80%;
   min-height: 450px;
-  background-color: #461d57;
+  background-color: #151318;
   border: 1px solid transparent;
   border-radius: 5%;
   transform-origin: center center;

@@ -20,7 +20,8 @@ body {
 header {
   width: 100%;
   height: 100vh;
-  background-color: #47316b;
+  /* background-color: #47316b; */
+  background-color: #151318;
   color: #fff;
 }
 
