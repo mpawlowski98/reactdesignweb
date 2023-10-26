@@ -22,7 +22,7 @@ function Main() {
   const closeModalContact = () => {
     setIsModalOpenContact(false);
   };
-
+  //test
   return (
     <div id="about">
       <section id={css.about}>
