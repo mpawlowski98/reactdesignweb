@@ -49,11 +49,6 @@
   transition: all 0.3s ease;
   border-color: #0350a8;
 }
-/* #about .card:hover,
-#features .card:hover {
-  border-color: #0350a8;
-  box-shadow: none;
-} */
 #about .card img {
   max-width: 200px;
   max-height: 200px;

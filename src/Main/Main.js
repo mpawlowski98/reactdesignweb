@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import css from './Main.module.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import photo from '../image/photo.jpg';
 import { ReactComponent as Filmoteka } from '../image/filmoteka.svg';
 import { ReactComponent as Sudoku } from '../image/sudoku.svg';
 import { ReactComponent as PhoneBook } from '../image/phonebook.svg';
+import Slider from 'react-slick';
+
 function Main() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenContact, setIsModalOpenContact] = useState(false);
+  const slider = useRef(null);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slickToShow: 3,
+    slickToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+  };
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -145,6 +160,197 @@ function Main() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+      <section id={css.features}>
+        <div onClick={() => slider?.current.slickPrev()}>
+          <h2>Wstecz</h2>
+        </div>
+        <Slider ref={slider} {...settings}>
+          <div className={css.card}>
+            <div className={css.info}>
+              <Sudoku />
+              <h1>Sudoku</h1>
+              <span>
+                <p className={css.title}>[HTML, CSS, JS]</p>
+                Gra Sudoku umożliwia wybór poziomu trudności, taki jak "Easy"
+                (łatwe), "Medium" (średnie) i "Hard" (trudne). Każdy poziom
+                trudności różni się ilością i umiejscowieniem początkowych liczb
+                na planszy.Plansza jest generowana losowo, przy zachowaniu zasad
+                Sudoku, tak aby była wykonalna, ale niezbyt łatwa.Gracz może
+                używać myszki lub klawiatury do wypełniania pustych komórek
+                liczbami od 1 do 9. System automatycznie sprawdza, czy
+                wypełniona liczba nie narusza zasad Sudoku.
+              </span>
+              <a
+                href="https://mpawlowski98.github.io/Sudoku/"
+                className={css.gameLink2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click Me
+              </a>
+            </div>
+          </div>
+
+          <div className={css.card}>
+            <div className={css.info}>
+              <Filmoteka />
+
+              <h1>Filmoteka</h1>
+              <span>
+                <p className={css.title}>[HTML, CSS, SASS, JS]</p>
+                Strona "Filmoteka" umożliwia użytkownikom wyszukiwanie filmów za
+                pomocą tytułu, po kliknięciu na film w wynikach wyszukiwania
+                użytkownicy mogą zobaczyć pełne informacje o filmie. Znajdują
+                się tutaj m.in. opis fabuły, gatunek, popularność i ocena
+                użytkowników.Użytkownicy mogą dodawać filmy do dwóch głównych
+                kolekcji: "Watched" (obejrzane) i "Queue" (do obejrzenia).
+                Dzięki temu mogą śledzić, które filmy już obejrzeli, a które
+                chcieliby zobaczyć w przyszłości.
+              </span>
+              <a
+                href="https://bieganskip.github.io/team-sztywniutko/"
+                className={css.gameLink2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click Me
+              </a>
+            </div>
+          </div>
+
+          <div className={css.card}>
+            <div className={css.info}>
+              <PhoneBook />
+              <h1>PhoneBook</h1>
+              <span>
+                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
+                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
+                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
+                logować się do swojego konta, co pozwala na dostęp do ich
+                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
+                dodawać nowe kontakty, klikając przycisk "Dodaj
+                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
+                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
+                użytkownikom wyszukiwanie kontaktów.
+              </span>
+              <a
+                href="https://mpawlowski98.github.io/phonebook/"
+                className={css.gameLink2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click Me
+              </a>
+            </div>
+          </div>
+
+          <div className={css.card}>
+            <div className={css.info}>
+              <PhoneBook />
+              <h1>TESt 4 </h1>
+              <span>
+                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
+                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
+                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
+                logować się do swojego konta, co pozwala na dostęp do ich
+                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
+                dodawać nowe kontakty, klikając przycisk "Dodaj
+                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
+                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
+                użytkownikom wyszukiwanie kontaktów.
+              </span>
+              <a
+                href="https://mpawlowski98.github.io/phonebook/"
+                className={css.gameLink2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div className={css.card}>
+            <div className={css.info}>
+              <PhoneBook />
+              <h1>TESt 5 </h1>
+              <span>
+                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
+                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
+                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
+                logować się do swojego konta, co pozwala na dostęp do ich
+                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
+                dodawać nowe kontakty, klikając przycisk "Dodaj
+                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
+                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
+                użytkownikom wyszukiwanie kontaktów.
+              </span>
+              <a
+                href="https://mpawlowski98.github.io/phonebook/"
+                className={css.gameLink2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click Me
+              </a>
+            </div>
+          </div>
+
+          <div className={css.card}>
+            <div className={css.info}>
+              <PhoneBook />
+              <h1>TESt 6 </h1>
+              <span>
+                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
+                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
+                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
+                logować się do swojego konta, co pozwala na dostęp do ich
+                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
+                dodawać nowe kontakty, klikając przycisk "Dodaj
+                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
+                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
+                użytkownikom wyszukiwanie kontaktów.
+              </span>
+              <a
+                href="https://mpawlowski98.github.io/phonebook/"
+                className={css.gameLink2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click Me
+              </a>
+            </div>
+          </div>
+
+          <div className={css.card}>
+            <div className={css.info}>
+              <PhoneBook />
+              <h1>TESt 7 </h1>
+              <span>
+                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
+                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
+                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
+                logować się do swojego konta, co pozwala na dostęp do ich
+                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
+                dodawać nowe kontakty, klikając przycisk "Dodaj
+                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
+                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
+                użytkownikom wyszukiwanie kontaktów.
+              </span>
+              <a
+                href="https://mpawlowski98.github.io/phonebook/"
+                className={css.gameLink2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click Me
+              </a>
+            </div>
+          </div>
+        </Slider>
+        <div onClick={() => slider?.current.slickNext()}>
+          <h2>Dalej</h2>
         </div>
       </section>
       {isModalOpen && (
