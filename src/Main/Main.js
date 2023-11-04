@@ -20,23 +20,28 @@ function Main() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: '25px',
     responsive: [
       {
         breakpoint: 1280,
         settings: {
           slidesToShow: 3,
+          centerMode: true,
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          centerMode: false,
         },
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
+          centerMode: false,
         },
       },
     ],
