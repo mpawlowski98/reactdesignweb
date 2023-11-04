@@ -311,15 +311,15 @@
   #features .featurescards .card {
     min-width: 350px;
   }
-  #about .card .info span,
-  #features .card .info span {
-    height: 250px;
-  }
 }
 
 @media screen and (min-width: 1280px) {
   .modalcontact {
     width: 25%;
     left: 37%;
+  }
+  #about .card .info span,
+  #features .card .info span {
+    height: 250px;
   }
 }
