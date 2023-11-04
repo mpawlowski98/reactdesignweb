@@ -6,29 +6,40 @@ import photo from '../image/photo.jpg';
 import { ReactComponent as Filmoteka } from '../image/filmoteka.svg';
 import { ReactComponent as Sudoku } from '../image/sudoku.svg';
 import { ReactComponent as PhoneBook } from '../image/phonebook.svg';
+import { ReactComponent as Search } from '../image/search.svg';
 import Slider from 'react-slick';
 
 function Main() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenContact, setIsModalOpenContact] = useState(false);
   const slider = useRef(null);
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
-    slickToShow: 3,
-    slickToScroll: 1,
+    speed: 1500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    centerMode: true,
-  };
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   const openModalContact = () => {
     setIsModalOpenContact(true);
@@ -37,7 +48,6 @@ function Main() {
   const closeModalContact = () => {
     setIsModalOpenContact(false);
   };
-  //test
   return (
     <div id="about">
       <section id={css.about}>
@@ -70,101 +80,9 @@ function Main() {
           </div>
         </div>
       </section>
-
       <section id={css.features}>
         <div className={css.header}>
           <h1>Projects</h1>
-          <button
-            className={`${css.gameLink2} ${css.btnanimation}`}
-            id={css.myCard}
-            onClick={openModal}
-          >
-            See More
-          </button>
-        </div>
-        <div className={css.featurescards}>
-          <div className={css.card}>
-            <div className={css.info}>
-              <Filmoteka />
-
-              <h1>Filmoteka</h1>
-              <span>
-                <p className={css.title}>[HTML, CSS, SASS, JS]</p>
-                Strona "Filmoteka" umożliwia użytkownikom wyszukiwanie filmów za
-                pomocą tytułu, po kliknięciu na film w wynikach wyszukiwania
-                użytkownicy mogą zobaczyć pełne informacje o filmie. Znajdują
-                się tutaj m.in. opis fabuły, gatunek, popularność i ocena
-                użytkowników.Użytkownicy mogą dodawać filmy do dwóch głównych
-                kolekcji: "Watched" (obejrzane) i "Queue" (do obejrzenia).
-                Dzięki temu mogą śledzić, które filmy już obejrzeli, a które
-                chcieliby zobaczyć w przyszłości.
-              </span>
-              <a
-                href="https://bieganskip.github.io/team-sztywniutko/"
-                className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-          <div className={css.card}>
-            <div className={css.info}>
-              <Sudoku />
-              <h1>Sudoku</h1>
-              <span>
-                <p className={css.title}>[HTML, CSS, JS]</p>
-                Gra Sudoku umożliwia wybór poziomu trudności, taki jak "Easy"
-                (łatwe), "Medium" (średnie) i "Hard" (trudne). Każdy poziom
-                trudności różni się ilością i umiejscowieniem początkowych liczb
-                na planszy.Plansza jest generowana losowo, przy zachowaniu zasad
-                Sudoku, tak aby była wykonalna, ale niezbyt łatwa.Gracz może
-                używać myszki lub klawiatury do wypełniania pustych komórek
-                liczbami od 1 do 9. System automatycznie sprawdza, czy
-                wypełniona liczba nie narusza zasad Sudoku.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/Sudoku/"
-                className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-
-          <div className={css.card}>
-            <div className={css.info}>
-              <PhoneBook />
-              <h1>PhoneBook</h1>
-              <span>
-                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
-                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
-                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
-                logować się do swojego konta, co pozwala na dostęp do ich
-                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
-                dodawać nowe kontakty, klikając przycisk "Dodaj
-                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
-                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
-                użytkownikom wyszukiwanie kontaktów.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/phonebook/"
-                className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id={css.features}>
-        <div onClick={() => slider?.current.slickPrev()}>
-          <h2>Wstecz</h2>
         </div>
         <Slider ref={slider} {...settings}>
           <div className={css.card}>
@@ -248,24 +166,22 @@ function Main() {
 
           <div className={css.card}>
             <div className={css.info}>
-              <PhoneBook />
-              <h1>TESt 4 </h1>
+              <Search />
+              <h1>Image Finder</h1>
               <span>
-                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
-                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
-                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
-                logować się do swojego konta, co pozwala na dostęp do ich
-                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
-                dodawać nowe kontakty, klikając przycisk "Dodaj
-                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
-                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
-                użytkownikom wyszukiwanie kontaktów.
+                <p className={css.title}>[HTML, CSS, JS]</p>
+                Aplikacja "Image Finder" to narzędzie umożliwiające użytkownikom
+                znalezienie zdjęć związanych z określoną rzeczą lub tematem
+                poprzez wykorzystanie interfejsu programistycznego API. Ta
+                aplikacja jest przydatna dla osób, które poszukują ilustracji,
+                zdjęć lub grafik na różne cele, takie jak projektowanie,
+                badania, nauka czy po prostu ciekawość.
               </span>
               <a
-                href="https://mpawlowski98.github.io/phonebook/"
-                className={css.gameLink2}
+                href="https://mpawlowski98.github.io/goit-react-hw-03-image-finder/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className={css.gameLink2}
               >
                 Click Me
               </a>
@@ -273,50 +189,22 @@ function Main() {
           </div>
           <div className={css.card}>
             <div className={css.info}>
-              <PhoneBook />
-              <h1>TESt 5 </h1>
+              <Sudoku />
+              <h1>XO</h1>
               <span>
-                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
-                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
-                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
-                logować się do swojego konta, co pozwala na dostęp do ich
-                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
-                dodawać nowe kontakty, klikając przycisk "Dodaj
-                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
-                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
-                użytkownikom wyszukiwanie kontaktów.
+                <p className={css.title}>[HTML, CSS, JS]</p>
+                Aplikacja "Kółko i Krzyżyk" to wirtualna wersja klasycznej gry
+                logicznej, znanej także jako Tic-Tac-Toe. Jest to prosta, a
+                zarazem wciągająca gra, w której dwóch graczy rywalizuje ze sobą
+                na planszy 3x3, próbując ułożyć trzy swoje symbole w rzędzie,
+                kolumnie lub na przekątnej. Ta aplikacja zapewnia rozrywkę i
+                zabawę, zarówno dla dzieci, jak i dla dorosłych.
               </span>
               <a
-                href="https://mpawlowski98.github.io/phonebook/"
-                className={css.gameLink2}
+                href="https://mpawlowski98.github.io/Wheel-and-cross/"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-
-          <div className={css.card}>
-            <div className={css.info}>
-              <PhoneBook />
-              <h1>TESt 6 </h1>
-              <span>
-                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
-                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
-                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
-                logować się do swojego konta, co pozwala na dostęp do ich
-                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
-                dodawać nowe kontakty, klikając przycisk "Dodaj
-                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
-                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
-                użytkownikom wyszukiwanie kontaktów.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/phonebook/"
                 className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Click Me
               </a>
@@ -325,21 +213,65 @@ function Main() {
 
           <div className={css.card}>
             <div className={css.info}>
-              <PhoneBook />
-              <h1>TESt 7 </h1>
+              <Sudoku />
+              <h1>CoinFlip</h1>
               <span>
-                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
-                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
-                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
-                logować się do swojego konta, co pozwala na dostęp do ich
-                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
-                dodawać nowe kontakty, klikając przycisk "Dodaj
-                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
-                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
-                użytkownikom wyszukiwanie kontaktów.
+                <p className={css.title}>[HTML, CSS, JS]</p>
+                Aplikacja "Coin Flip - Heads czy Tails" to narzędzie
+                umożliwiające użytkownikom losowe generowanie wyników rzutu
+                monetą, czyli wyboru między "heads" i "tails". Ta prosta
+                aplikacja zapewnia zarówno zabawę, jak i możliwość zapisywania
+                wyników rzutów monetą dla celów rozrywki lub innych psotrzeb.
               </span>
               <a
-                href="https://mpawlowski98.github.io/phonebook/"
+                href="https://mpawlowski98.github.io/CoinFlip/"
+                className={css.gameLink2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div className={css.card}>
+            <div className={css.info}>
+              <Filmoteka />
+              <h1>Movie</h1>
+              <span>
+                <p className={css.title}>[HTML, CSS, JS, React]</p>
+                Aplikacja "Movie" to narzędzie, które umożliwia użytkownikom
+                przeszukiwanie bazy filmów za pośrednictwem zintegrowanego API
+                filmowego. Umożliwia to użytkownikom znalezienie filmów,
+                przeczytanie ich opisów, zobaczenie listy aktorów oraz
+                przeglądanie komentarzy i recenzji na ich temat. Aplikacja ta
+                jest idealna dla miłośników kina, którzy chcą dowiedzieć się
+                więcej o filmach i dzielić się swoimi opiniami.
+              </span>
+              <a
+                href="https://mpawlowski98.github.io/movies/"
+                className={css.gameLink2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click Me
+              </a>
+            </div>
+          </div>
+          <div className={css.card}>
+            <div className={css.info}>
+              <Search />
+              <h1>Country information</h1>
+              <span>
+                <p className={css.title}>[HTML, CSS, JS]</p>
+                Aplikacja "Country Information" to narzędzie, które umożliwia
+                użytkownikom szybkie uzyskanie podstawowych informacji o
+                wybranym państwie na całym świecie. Bez względu na to, czy
+                jesteś zainteresowany podróżami, badaniami geograficznymi,
+                kulturą czy po prostu chcesz poznać więcej o danym kraju, ta
+                aplikacja jest dla ciebie.
+              </span>
+              <a
+                href="https://mpawlowski98.github.io/Countries/"
                 className={css.gameLink2}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -349,63 +281,7 @@ function Main() {
             </div>
           </div>
         </Slider>
-        <div onClick={() => slider?.current.slickNext()}>
-          <h2>Dalej</h2>
-        </div>
       </section>
-      {isModalOpen && (
-        <div className={`modal ${isModalOpen ? 'modalshow' : ''}`}>
-          <div id="myModal" className={css.modal}>
-            <div className={css.modalcontent}>
-              <span className={css.close} onClick={closeModal}>
-                X
-              </span>
-              <div className={css.modalcontainer}>
-                <a
-                  href="https://mpawlowski98.github.io/movies/"
-                  className={css.gameLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Movie [HTML, CSS, JS, React]
-                </a>
-                <a
-                  href="https://mpawlowski98.github.io/CoinFlip/"
-                  className={css.gameLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  CoinFlip [HTML, CSS, JS]
-                </a>
-                <a
-                  href="https://mpawlowski98.github.io/Wheel-and-cross/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={css.gameLink}
-                >
-                  XO [HTML, CSS, JS]
-                </a>
-                <a
-                  href="https://mpawlowski98.github.io/goit-react-hw-03-image-finder/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={css.gameLink}
-                >
-                  Image Finder [HTML, CSS, JS]
-                </a>
-                <a
-                  href="https://mpawlowski98.github.io/Countries/"
-                  className={css.gameLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Country information [HTML, CSS, JS]
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {isModalOpenContact && (
         <div className={`modalcontact ${isModalOpenContact ? 'show' : ''}`}>
