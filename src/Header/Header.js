@@ -8,7 +8,7 @@ function Header() {
     <header>
       <div id="particles-container" className={css.particlesContainer}></div>
       <div className={css.videobackground}>
-        <video autoPlay loading="lazy" loop muted>
+        <video autoPlay loop muted>
           <source src={back} type="video/mp4" />
         </video>
 
