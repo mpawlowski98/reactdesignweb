@@ -57,7 +57,7 @@ function Main() {
     <div id="about">
       <section id={css.about}>
         <div className={css.header}>
-          <h1>About Me</h1>
+          <h2>About Me</h2>
           <button
             className={`${css.gameLink2} ${css.btnanimation}`}
             id={css.hireme}
@@ -69,7 +69,7 @@ function Main() {
         <div className={css.card}>
           <img src={photo} alt="zdjęcie z CV" />
           <div className={css.info}>
-            <h1>Cześć, jestem Michał</h1>
+            <h2>Cześć, jestem Michał</h2>
             <p>
               Uczę się programować od ponad roku i z dnia na dzień rozwijam
               swoje umiejętności. Programowanie stało się moją pasją, a każdy
@@ -87,13 +87,13 @@ function Main() {
       </section>
       <section id={css.features}>
         <div className={css.header}>
-          <h1>Projects</h1>
+          <h2>Projects</h2>
         </div>
         <Slider ref={slider} {...settings}>
           <div className={css.card}>
             <div className={css.info}>
               <Sudoku />
-              <h1>Sudoku</h1>
+              <h2>Sudoku</h2>
               <span>
                 <p className={css.title}>[HTML, CSS, JS]</p>
                 Gra Sudoku umożliwia wybór poziomu trudności, taki jak "Easy"
@@ -120,7 +120,7 @@ function Main() {
             <div className={css.info}>
               <Filmoteka />
 
-              <h1>Filmoteka</h1>
+              <h2>Filmoteka</h2>
               <span>
                 <p className={css.title}>[HTML, CSS, SASS, JS]</p>
                 Strona "Filmoteka" umożliwia użytkownikom wyszukiwanie filmów za
@@ -146,7 +146,7 @@ function Main() {
           <div className={css.card}>
             <div className={css.info}>
               <PhoneBook />
-              <h1>PhoneBook</h1>
+              <h2>PhoneBook</h2>
               <span>
                 <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
                 Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
@@ -172,7 +172,7 @@ function Main() {
           <div className={css.card}>
             <div className={css.info}>
               <Search />
-              <h1>Image Finder</h1>
+              <h2>Image Finder</h2>
               <span>
                 <p className={css.title}>[HTML, CSS, JS]</p>
                 Aplikacja "Image Finder" to narzędzie umożliwiające użytkownikom
@@ -195,7 +195,7 @@ function Main() {
           <div className={css.card}>
             <div className={css.info}>
               <Sudoku />
-              <h1>XO</h1>
+              <h2>XO</h2>
               <span>
                 <p className={css.title}>[HTML, CSS, JS]</p>
                 Aplikacja "Kółko i Krzyżyk" to wirtualna wersja klasycznej gry
@@ -219,7 +219,7 @@ function Main() {
           <div className={css.card}>
             <div className={css.info}>
               <Sudoku />
-              <h1>CoinFlip</h1>
+              <h2>CoinFlip</h2>
               <span>
                 <p className={css.title}>[HTML, CSS, JS]</p>
                 Aplikacja "Coin Flip - Heads czy Tails" to narzędzie
@@ -241,7 +241,7 @@ function Main() {
           <div className={css.card}>
             <div className={css.info}>
               <Filmoteka />
-              <h1>Movie</h1>
+              <h2>Movie</h2>
               <span>
                 <p className={css.title}>[HTML, CSS, JS, React]</p>
                 Aplikacja "Movie" to narzędzie, które umożliwia użytkownikom
@@ -265,7 +265,7 @@ function Main() {
           <div className={css.card}>
             <div className={css.info}>
               <Search />
-              <h1>Country information</h1>
+              <h2>Country information</h2>
               <span>
                 <p className={css.title}>[HTML, CSS, JS]</p>
                 Aplikacja "Country Information" to narzędzie, które umożliwia
