@@ -130,7 +130,7 @@ function Main() {
   ];
 
   const projectsPerSlide = 8;
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const currentSlide = useState(0)[0];
 
   const displayProjects = projects.slice(
     currentSlide * projectsPerSlide,
