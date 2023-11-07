@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import Slider from 'react-slick';
 import css from './Main.module.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -7,7 +8,6 @@ import { ReactComponent as Filmoteka } from '../image/filmoteka.svg';
 import { ReactComponent as Sudoku } from '../image/sudoku.svg';
 import { ReactComponent as PhoneBook } from '../image/phonebook.svg';
 import { ReactComponent as Search } from '../image/search.svg';
-import Slider from 'react-slick';
 
 function Main() {
   const [isModalOpenContact, setIsModalOpenContact] = useState(false);
@@ -53,6 +53,90 @@ function Main() {
   const closeModalContact = () => {
     setIsModalOpenContact(false);
   };
+
+  const projects = [
+    {
+      id: 1,
+      title: 'Sudoku',
+      titleDescription: '[HTML, CSS, JS]',
+      description:
+        'Gra Sudoku umożliwia wybór poziomu trudności, taki jak Eas (łatwe), Medium (średnie) i Hard (trudne). Każdy poziom trudności różni się ilością i umiejscowieniem początkowych liczb na planszy.Plansza jest generowana losowo, przy zachowaniu zasad Sudoku, tak aby była wykonalna, ale niezbyt łatwa.Gracz może używać myszki lub klawiatury do wypełniania pustych komórek liczbami od 1 do 9. System automatycznie sprawdza, czy wypełniona liczba nie narusza zasad Sudoku.',
+      link: 'https://mpawlowski98.github.io/Sudoku/',
+      image: Sudoku,
+    },
+    {
+      id: 2,
+      title: 'Filmoteka',
+      titleDescription: '[HTML, CSS, SASS, JS]',
+      description:
+        'Strona "Filmoteka" umożliwia użytkownikom wyszukiwanie filmów za pomocą tytułu, po kliknięciu na film w wynikach wyszukiwania użytkownicy mogą zobaczyć pełne informacje o filmie. Znajdują się tutaj m.in. opis fabuły, gatunek, popularność i ocena użytkowników.Użytkownicy mogą dodawać filmy do dwóch głównych kolekcji: "Watched" (obejrzane) i "Queue" (do obejrzenia). Dzięki temu mogą śledzić, które filmy już obejrzeli, a które chcieliby zobaczyć w przyszłości.',
+      link: 'https://bieganskip.github.io/team-sztywniutko/',
+      image: Filmoteka,
+    },
+    {
+      id: 3,
+      title: 'PhoneBook',
+      titleDescription: '[HTML, CSS, MUI, React, Node]',
+      description:
+        'Aplikacja umożliwia użytkownikom rejestrację konta za pomocą swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą logować się do swojego konta, co pozwala na dostęp do ich spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo dodawać nowe kontakty, klikając przycisk "Dodaj Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia użytkownikom wyszukiwanie kontaktów.',
+      link: 'https://mpawlowski98.github.io/phonebook/',
+      image: PhoneBook,
+    },
+    {
+      id: 4,
+      title: 'Image Finder',
+      titleDescription: '[HTML, CSS, JS]',
+      description:
+        'Aplikacja "Image Finder" to narzędzie umożliwiające użytkownikom znalezienie zdjęć związanych z określoną rzeczą lub tematem poprzez wykorzystanie interfejsu programistycznego API. Ta aplikacja jest przydatna dla osób, które poszukują ilustracji, zdjęć lub grafik na różne cele, takie jak projektowanie, badania, nauka czy po prostu ciekawość.',
+      link: 'https://mpawlowski98.github.io/goit-react-hw-03-image-finder/',
+      image: Search,
+    },
+    {
+      id: 5,
+      title: 'XO',
+      titleDescription: '[HTML, CSS, JS]',
+      description:
+        'Aplikacja "Kółko i Krzyżyk" to wirtualna wersja klasycznej gry logicznej, znanej także jako Tic-Tac-Toe. Jest to prosta, a zarazem wciągająca gra, w której dwóch graczy rywalizuje ze sobą na planszy 3x3, próbując ułożyć trzy swoje symbole w rzędzie, kolumnie lub na przekątnej. Ta aplikacja zapewnia rozrywkę i zabawę, zarówno dla dzieci, jak i dla dorosłych.',
+      link: 'https://mpawlowski98.github.io/Wheel-and-cross/',
+      image: Sudoku,
+    },
+    {
+      id: 6,
+      title: 'CoinFlip',
+      titleDescription: '[HTML, CSS, JS]',
+      description:
+        'Aplikacja "Coin Flip - Heads czy Tails" to narzędzie umożliwiające użytkownikom losowe generowanie wyników rzutu monetą, czyli wyboru między "heads" i "tails". Ta prosta aplikacja zapewnia zarówno zabawę, jak i możliwość zapisywania wyników rzutów monetą dla celów rozrywki lub innych psotrzeb.',
+      link: 'https://mpawlowski98.github.io/CoinFlip/',
+      image: Sudoku,
+    },
+    {
+      id: 7,
+      title: 'Movie',
+      titleDescription: '[HTML, CSS, JS, React]',
+      description:
+        ' Aplikacja "Movie" to narzędzie, które umożliwia użytkownikom przeszukiwanie bazy filmów za pośrednictwem zintegrowanego API filmowego. Umożliwia to użytkownikom znalezienie filmów, przeczytanie ich opisów, zobaczenie listy aktorów oraz przeglądanie komentarzy i recenzji na ich temat. Aplikacja ta jest idealna dla miłośników kina, którzy chcą dowiedzieć się więcej o filmach i dzielić się swoimi opiniami.',
+      link: 'https://mpawlowski98.github.io/movies/',
+      image: Filmoteka,
+    },
+    {
+      id: 8,
+      title: 'Country information',
+      titleDescription: '[HTML, CSS, JS]',
+      description:
+        'Aplikacja "Country Information" to narzędzie, które umożliwia użytkownikom szybkie uzyskanie podstawowych informacji o wybranym państwie na całym świecie. Bez względu na to, czy jesteś zainteresowany podróżami, badaniami geograficznymi, kulturą czy po prostu chcesz poznać więcej o danym kraju, ta aplikacja jest dla ciebie.',
+      link: 'https://mpawlowski98.github.io/Countries/',
+      image: Search,
+    },
+  ];
+
+  const projectsPerSlide = 8;
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const displayProjects = projects.slice(
+    currentSlide * projectsPerSlide,
+    (currentSlide + 1) * projectsPerSlide
+  );
+
   return (
     <div id="about">
       <section id={css.about}>
@@ -89,202 +173,28 @@ function Main() {
         <div className={css.header}>
           <h2>Projects</h2>
         </div>
+
         <Slider ref={slider} {...settings}>
-          <div className={css.card}>
-            <div className={css.info}>
-              <Sudoku />
-              <h2>Sudoku</h2>
-              <span>
-                <p className={css.title}>[HTML, CSS, JS]</p>
-                Gra Sudoku umożliwia wybór poziomu trudności, taki jak "Easy"
-                (łatwe), "Medium" (średnie) i "Hard" (trudne). Każdy poziom
-                trudności różni się ilością i umiejscowieniem początkowych liczb
-                na planszy.Plansza jest generowana losowo, przy zachowaniu zasad
-                Sudoku, tak aby była wykonalna, ale niezbyt łatwa.Gracz może
-                używać myszki lub klawiatury do wypełniania pustych komórek
-                liczbami od 1 do 9. System automatycznie sprawdza, czy
-                wypełniona liczba nie narusza zasad Sudoku.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/Sudoku/"
-                className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
+          {displayProjects.map(project => (
+            <div key={project.id} className={css.card}>
+              <div className={css.info}>
+                {project.image && <project.image />}
+                <h2>{project.title}</h2>
+                <span>
+                  <p className={css.title}>{project.titleDescription}</p>
+                  {project.description}
+                </span>
+                <a
+                  href={project.link}
+                  className={css.gameLink2}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Click Me
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div className={css.card}>
-            <div className={css.info}>
-              <Filmoteka />
-
-              <h2>Filmoteka</h2>
-              <span>
-                <p className={css.title}>[HTML, CSS, SASS, JS]</p>
-                Strona "Filmoteka" umożliwia użytkownikom wyszukiwanie filmów za
-                pomocą tytułu, po kliknięciu na film w wynikach wyszukiwania
-                użytkownicy mogą zobaczyć pełne informacje o filmie. Znajdują
-                się tutaj m.in. opis fabuły, gatunek, popularność i ocena
-                użytkowników.Użytkownicy mogą dodawać filmy do dwóch głównych
-                kolekcji: "Watched" (obejrzane) i "Queue" (do obejrzenia).
-                Dzięki temu mogą śledzić, które filmy już obejrzeli, a które
-                chcieliby zobaczyć w przyszłości.
-              </span>
-              <a
-                href="https://bieganskip.github.io/team-sztywniutko/"
-                className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-
-          <div className={css.card}>
-            <div className={css.info}>
-              <PhoneBook />
-              <h2>PhoneBook</h2>
-              <span>
-                <p className={css.title}>[HTML, CSS, MUI, React, Node]</p>
-                Aplikacja umożliwia użytkownikom rejestrację konta za pomocą
-                swojego adresu e-mail i hasła. Po rejestracji użytkownicy mogą
-                logować się do swojego konta, co pozwala na dostęp do ich
-                spersonalizowanej książki telefonicznej.Użytkownicy mogą łatwo
-                dodawać nowe kontakty, klikając przycisk "Dodaj
-                Kontakt".Aplikacja umożliwia użytkownikom łatwe wyszukiwanie
-                kontaktów za pomocą pola wyszukiwania.Aplikacja umożliwia
-                użytkownikom wyszukiwanie kontaktów.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/phonebook/"
-                className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-
-          <div className={css.card}>
-            <div className={css.info}>
-              <Search />
-              <h2>Image Finder</h2>
-              <span>
-                <p className={css.title}>[HTML, CSS, JS]</p>
-                Aplikacja "Image Finder" to narzędzie umożliwiające użytkownikom
-                znalezienie zdjęć związanych z określoną rzeczą lub tematem
-                poprzez wykorzystanie interfejsu programistycznego API. Ta
-                aplikacja jest przydatna dla osób, które poszukują ilustracji,
-                zdjęć lub grafik na różne cele, takie jak projektowanie,
-                badania, nauka czy po prostu ciekawość.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/goit-react-hw-03-image-finder/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={css.gameLink2}
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-          <div className={css.card}>
-            <div className={css.info}>
-              <Sudoku />
-              <h2>XO</h2>
-              <span>
-                <p className={css.title}>[HTML, CSS, JS]</p>
-                Aplikacja "Kółko i Krzyżyk" to wirtualna wersja klasycznej gry
-                logicznej, znanej także jako Tic-Tac-Toe. Jest to prosta, a
-                zarazem wciągająca gra, w której dwóch graczy rywalizuje ze sobą
-                na planszy 3x3, próbując ułożyć trzy swoje symbole w rzędzie,
-                kolumnie lub na przekątnej. Ta aplikacja zapewnia rozrywkę i
-                zabawę, zarówno dla dzieci, jak i dla dorosłych.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/Wheel-and-cross/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={css.gameLink2}
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-
-          <div className={css.card}>
-            <div className={css.info}>
-              <Sudoku />
-              <h2>CoinFlip</h2>
-              <span>
-                <p className={css.title}>[HTML, CSS, JS]</p>
-                Aplikacja "Coin Flip - Heads czy Tails" to narzędzie
-                umożliwiające użytkownikom losowe generowanie wyników rzutu
-                monetą, czyli wyboru między "heads" i "tails". Ta prosta
-                aplikacja zapewnia zarówno zabawę, jak i możliwość zapisywania
-                wyników rzutów monetą dla celów rozrywki lub innych psotrzeb.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/CoinFlip/"
-                className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-          <div className={css.card}>
-            <div className={css.info}>
-              <Filmoteka />
-              <h2>Movie</h2>
-              <span>
-                <p className={css.title}>[HTML, CSS, JS, React]</p>
-                Aplikacja "Movie" to narzędzie, które umożliwia użytkownikom
-                przeszukiwanie bazy filmów za pośrednictwem zintegrowanego API
-                filmowego. Umożliwia to użytkownikom znalezienie filmów,
-                przeczytanie ich opisów, zobaczenie listy aktorów oraz
-                przeglądanie komentarzy i recenzji na ich temat. Aplikacja ta
-                jest idealna dla miłośników kina, którzy chcą dowiedzieć się
-                więcej o filmach i dzielić się swoimi opiniami.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/movies/"
-                className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
-          <div className={css.card}>
-            <div className={css.info}>
-              <Search />
-              <h2>Country information</h2>
-              <span>
-                <p className={css.title}>[HTML, CSS, JS]</p>
-                Aplikacja "Country Information" to narzędzie, które umożliwia
-                użytkownikom szybkie uzyskanie podstawowych informacji o
-                wybranym państwie na całym świecie. Bez względu na to, czy
-                jesteś zainteresowany podróżami, badaniami geograficznymi,
-                kulturą czy po prostu chcesz poznać więcej o danym kraju, ta
-                aplikacja jest dla ciebie.
-              </span>
-              <a
-                href="https://mpawlowski98.github.io/Countries/"
-                className={css.gameLink2}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click Me
-              </a>
-            </div>
-          </div>
+          ))}
         </Slider>
       </section>
 
