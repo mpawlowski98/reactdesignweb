@@ -4,23 +4,23 @@
   padding: 40px;
 }
 
-#about .header,
-#features .header {
+#about .mainHeader,
+#features .mainHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
 }
 
-#about .header h2,
-#features .header h2 {
+#about .mainHeader h2,
+#features .mainHeader h2 {
   text-align: center;
   color: #fff;
   text-transform: uppercase;
 }
 
-#about .header a,
-#features .header a {
+#about .mainHeader a,
+#features .mainHeader a {
   text-decoration: none;
   font-size: 1.4rem;
   color: #fff;
@@ -32,14 +32,14 @@
   cursor: pointer;
 }
 
-#about .header a:hover,
-#features .header a:hover {
+#about .mainHeader a:hover,
+#features .mainHeader a:hover {
   border-color: #fff;
   box-shadow: none;
 }
 
-#about .card,
-#features .card {
+#about .mainCard,
+#features .mainCard {
   padding: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   border-radius: 20px;
@@ -49,20 +49,20 @@
   transition: all 0.3s ease;
   border-color: #0350a8;
 }
-#about .card img {
+#about .mainCard img {
   max-width: 200px;
   max-height: 200px;
 }
 
-#about .card .info {
+#about .mainCard .mainInfo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 
-#about .card .info h2,
-#features .card .info h2 {
+#about .mainCard .mainInfo h2,
+#features .mainCard .mainInfo h2 {
   margin-bottom: 20px;
   color: #fff;
   font-size: 2rem;
@@ -70,14 +70,14 @@
   font-family: 'Ubuntu';
 }
 
-#about .card .info p,
-#features .card .info p {
+#about .mainCard .mainInfo p,
+#features .mainCard .mainInfo p {
   color: #ccc;
   font-size: 1.1rem;
   line-height: 1.8rem;
 }
-#about .card .info span,
-#features .card .info span {
+#about .mainCard .mainInfo span,
+#features .mainCard .mainInfo span {
   color: #ccc;
   font-size: 1.1rem;
   line-height: 1.8rem;
@@ -90,7 +90,7 @@
   gap: 3rem;
 }
 
-#features .featurescards .card {
+#features .featurescards .mainCard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,7 +98,7 @@
   min-width: 250px;
 }
 
-#features .featurescards .card .info i {
+#features .featurescards .mainCard .mainInfo i {
   color: #fff;
   font-size: 8rem;
   width: 100%;
@@ -106,11 +106,11 @@
   margin-bottom: 1.4rem;
 }
 
-#features .featurescards .card .info h2 {
+#features .featurescards .mainCard .mainInfo h2 {
   text-align: center;
 }
 
-#features .featurescards .card .info p {
+#features .featurescards .mainCard .mainInfo p {
   font-size: 1.3rem;
   margin-bottom: 28px;
 }
@@ -142,7 +142,7 @@
   }
 }
 
-.modalcontact {
+.modalContact {
   position: fixed;
   top: 25%;
   left: 10%;
@@ -153,6 +153,7 @@
   background-color: #030308;
   border: 1px solid transparent;
   border-radius: 5%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   transform-origin: center center;
   transform: scale(1);
   animation-name: fadeIn;
@@ -161,7 +162,7 @@
   z-index: 1;
   border-color: #0350a8;
 }
-.modalcontactcontainer {
+.modalContactContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,9 +193,9 @@
   color: #fff;
 }
 
-.gameLink {
+.mainBtn {
   text-decoration: none;
-  background-color: #012752;
+  background-color: #030308;
   color: black;
   padding: 18px 0px;
   border: 1px solid transparent;
@@ -205,10 +206,11 @@
   color: #fff;
   font-weight: bold;
   font-family: 'Ubuntu';
-}
-.gameLink:hover,
-.gameLink:focus {
   border-color: #0350a8;
+}
+.mainBtn:hover,
+.mainBtn:focus {
+  background-color: #0350a8;
   box-shadow: none;
 }
 
@@ -220,9 +222,9 @@
   gap: 10px;
   margin-top: 40px;
 }
-.gameLink2 {
+.mainButton {
   text-decoration: none;
-  background-color: #012752;
+  background-color: #030308;
   font-size: 1.4rem;
   color: #fff;
   border: 1px solid transparent;
@@ -233,23 +235,24 @@
   font-weight: bold;
   font-family: 'Ubuntu';
   cursor: pointer;
-}
-.gameLink2:hover,
-.gameLink2:focus {
   border-color: #0350a8;
+}
+.mainButton:hover,
+.mainButton:focus {
+  background-color: #042c58;
   box-shadow: none;
 }
 
-.btnanimation::before {
+.btAnimation::before {
   content: '';
   background-color: red;
   transform: scaleX(0);
 }
-.btnanimation:hover::before {
+.btnAnimation:hover::before {
   transform: scaleX(1);
 }
 
-.gameLink3 {
+.mainBtn {
   text-decoration: none;
   font-size: 1.4rem;
   color: #fff;
@@ -265,13 +268,13 @@
   font-family: 'Ubuntu';
 }
 
-.gameLink3:hover,
-.gameLink3:focus {
+.mainBtn:hover,
+.mainBtn:focus {
   border-color: #0350a8;
   box-shadow: none;
 }
 
-.info {
+.mainInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,12 +291,12 @@
     font-size: 1.1rem;
   }
 
-  #about .card {
+  #about .mainCard {
     flex-direction: column;
     align-items: center;
   }
 
-  #about .card img {
+  #about .mainCard img {
     max-width: 150px;
     max-height: 150px;
   }
@@ -304,22 +307,26 @@
     width: 50%;
     left: 25%;
   }
-  .modalcontact {
+  .modalContact {
     width: 40%;
     left: 30%;
   }
-  #features .featurescards .card {
+  #features .featurescards .mainCard {
     min-width: 350px;
+  }
+  #about .mainCard .mainInfo span,
+  #features .mainCard .mainInfo span {
+    height: 500px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .modalcontact {
+  .modalContact {
     width: 25%;
     left: 37%;
   }
-  #about .card .info span,
-  #features .card .info span {
-    height: 250px;
+  #about .mainCard .mainInfo span,
+  #features .mainCard .mainInfo span {
+    height: 350px;
   }
 }

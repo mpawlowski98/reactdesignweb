@@ -34,7 +34,7 @@ function Footer() {
         <div className={css.contactContainer}>
           <a
             href="https://github.com/mpawlowski98"
-            className={css.gameLink3}
+            className={css.footerBtn}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -43,7 +43,7 @@ function Footer() {
 
           <a
             href="https://www.linkedin.com/in/micha%C5%82-piotr-paw%C5%82owski/"
-            className={css.gameLink3}
+            className={css.footerBtn}
             target="_blank"
             rel="noopener noreferrer"
           >

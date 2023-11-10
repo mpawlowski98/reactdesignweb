@@ -118,9 +118,10 @@ function Main() {
       link: 'https://mpawlowski98.github.io/movies/',
       image: Filmoteka,
     },
+
     {
       id: 8,
-      title: 'Country information',
+      title: 'Country Data',
       titleDescription: '[HTML, CSS, JS]',
       description:
         'Aplikacja "Country Information" to narzędzie, które umożliwia użytkownikom szybkie uzyskanie podstawowych informacji o wybranym państwie na całym świecie. Bez względu na to, czy jesteś zainteresowany podróżami, badaniami geograficznymi, kulturą czy po prostu chcesz poznać więcej o danym kraju, ta aplikacja jest dla ciebie.',
@@ -140,19 +141,19 @@ function Main() {
   return (
     <div id="about">
       <section id={css.about}>
-        <div className={css.header}>
+        <div className={css.mainHeader}>
           <h2>About Me</h2>
           <button
-            className={`${css.gameLink2} ${css.btnanimation}`}
+            className={`${css.mainButton} ${css.btnAnimation}`}
             id={css.hireme}
             onClick={openModalContact}
           >
             Hire Me
           </button>
         </div>
-        <div className={css.card}>
+        <div className={css.mainCard}>
           <img src={photo} alt="zdjęcie z CV" />
-          <div className={css.info}>
+          <div className={css.mainInfo}>
             <h2>Cześć, jestem Michał</h2>
             <p>
               Uczę się programować od ponad roku i z dnia na dzień rozwijam
@@ -170,14 +171,14 @@ function Main() {
         </div>
       </section>
       <section id={css.features}>
-        <div className={css.header}>
+        <div className={css.mainHeader}>
           <h2>Projects</h2>
         </div>
 
         <Slider ref={slider} {...settings}>
           {displayProjects.map(project => (
-            <div key={project.id} className={css.card}>
-              <div className={css.info}>
+            <div key={project.id} className={css.mainCard}>
+              <div className={css.mainInfo}>
                 {project.image && <project.image />}
                 <h2>{project.title}</h2>
                 <span>
@@ -186,7 +187,7 @@ function Main() {
                 </span>
                 <a
                   href={project.link}
-                  className={css.gameLink2}
+                  className={css.mainButton}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -200,21 +201,18 @@ function Main() {
 
       {isModalOpenContact && (
         <div className={`modalcontact ${isModalOpenContact ? 'show' : ''}`}>
-          <div id="myModalcontact" className={css.modalcontact}>
+          <div id="myModalcontact" className={css.modalContact}>
             <span className={css.closemodal} onClick={closeModalContact}>
               X
             </span>
-            <div className={css.modalcontactcontainer}>
+            <div className={css.modalContactContainer}>
               <p className={css.contacttitle}>Contact:</p>
-              <a
-                href="mailto: mpawlowski98@interia.pl"
-                className={css.gameLink3}
-              >
+              <a href="mailto: mpawlowski98@interia.pl" className={css.mainBtn}>
                 Napisz do mnie
               </a>
               <a
                 href="https://www.linkedin.com/in/micha%C5%82-piotr-paw%C5%82owski/"
-                className={css.gameLink3}
+                className={css.mainBtn}
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -7,9 +7,9 @@
   background-color: #030308;
   height: 13vh;
 }
-.gameLink3 {
+.footerBtn {
   text-decoration: none;
-  background-color: #012752;
+  background-color: #030308;
   font-size: 1.4rem;
   color: #fff;
   border: 1px solid transparent;
@@ -21,11 +21,12 @@
   cursor: pointer;
   font-weight: bold;
   font-family: 'Ubuntu';
+  border-color: #0350a8;
 }
 
-.gameLink3:hover,
-.gameLink3:focus {
-  border-color: #0350a8;
+.footerBtn:hover,
+.footerBtn:focus {
+  background-color: #012752;
   box-shadow: none;
 }
 

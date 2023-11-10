@@ -6,13 +6,13 @@ import back from '../image/back.mp4';
 function Header() {
   return (
     <header>
-      <div id="particles-container" className={css.particlesContainer}></div>
+      <div id="particles-container"></div>
       <div className={css.videobackground}>
         <video autoPlay loop muted>
           <source src={back} type="video/mp4" />
         </video>
 
-        <div className={css.infotext}>
+        <div className={css.headerTitle}>
           <h1>Michał Pawłowski</h1>
           <h3>Web Design Porfolio</h3>
           <a href="#about" className={css.scroll}>

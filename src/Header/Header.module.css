@@ -32,7 +32,7 @@ header #particles {
   left: 0;
 }
 
-header .infotext {
+header .headerTitle {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -42,18 +42,18 @@ header .infotext {
   height: 100vh;
 }
 
-header .infotext h1 {
+header .headerTitle h1 {
   font-size: 4rem;
   font-weight: 500;
   font-family: 'Ubuntu';
   text-align: center;
 }
 
-header .infotext h3 {
+header .headerTitle h3 {
   font-size: 1.5rem;
 }
 
-header .infotext .scroll {
+header .headerTitle .scroll {
   position: absolute;
   bottom: 15%;
   left: 50%;
@@ -62,11 +62,11 @@ header .infotext .scroll {
   transition: all 0.5s;
 }
 
-header .infotext .scroll:hover {
+header .headerTitle .scroll:hover {
   opacity: 0.7;
 }
 
-header .infotext .scroll::before {
+header .headerTitle .scroll::before {
   position: absolute;
 
   top: -10px;
@@ -133,10 +133,10 @@ header .infotext .scroll::before {
   }
 }
 @media screen and (min-width: 780px) {
-  header .infotext h1 {
+  header .headerTitle h1 {
     font-size: 5rem;
   }
-  header .infotext .scroll {
+  header .headerTitle .scroll {
     bottom: 20%;
   }
 }
