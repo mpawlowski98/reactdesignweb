@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reactdesignweb/static/css/main.d815215c.css",
-    "main.js": "/reactdesignweb/static/js/main.bd2dad2d.js",
+    "main.css": "/reactdesignweb/static/css/main.41afcf12.css",
+    "main.js": "/reactdesignweb/static/js/main.236ec83c.js",
     "static/media/back.mp4": "/reactdesignweb/static/media/back.9942d5b9e3b47d13dd8b.mp4",
     "static/media/photo.jpg": "/reactdesignweb/static/media/photo.b91d7be746daa50e61f1.jpg",
     "static/media/slick.svg": "/reactdesignweb/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -15,11 +15,11 @@
     "static/media/arrowtop.svg": "/reactdesignweb/static/media/arrowtop.3501a95306a1b6f7dac2b9f62af288fb.svg",
     "static/media/icons.svg#arrowheader": "/reactdesignweb/static/media/icons.04b39accfa8c4dceca236ae8ecc4275e.svg",
     "static/media/search.svg": "/reactdesignweb/static/media/search.b36f957c3e6588ad5206c541177323e1.svg",
-    "main.d815215c.css.map": "/reactdesignweb/static/css/main.d815215c.css.map",
-    "main.bd2dad2d.js.map": "/reactdesignweb/static/js/main.bd2dad2d.js.map"
+    "main.41afcf12.css.map": "/reactdesignweb/static/css/main.41afcf12.css.map",
+    "main.236ec83c.js.map": "/reactdesignweb/static/js/main.236ec83c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d815215c.css",
-    "static/js/main.bd2dad2d.js"
+    "static/css/main.41afcf12.css",
+    "static/js/main.236ec83c.js"
   ]
 }
