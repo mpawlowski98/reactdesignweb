@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useScroll, animated } from '@react-spring/web';
 import Slider from 'react-slick';
 import css from './Main.module.css';
 import 'slick-carousel/slick/slick.css';
@@ -11,6 +12,7 @@ import { ReactComponent as Search } from '../image/search.svg';
 
 function Main() {
   const [isModalOpenContact, setIsModalOpenContact] = useState(false);
+  const { scrollYProgress } = useScroll();
   const slider = useRef(null);
   const settings = {
     dots: true,
@@ -151,11 +153,22 @@ function Main() {
             Hire Me
           </button>
         </div>
+
         <div className={css.mainCard}>
           <img src={photo} alt="zdjęcie z CV" />
           <div className={css.mainInfo}>
-            <h2>Cześć, jestem Michał</h2>
-            <p>
+            <animated.h2
+              style={{
+                opacity: scrollYProgress,
+              }}
+            >
+              Cześć, jestem Michał
+            </animated.h2>
+            <animated.p
+              style={{
+                opacity: scrollYProgress,
+              }}
+            >
               Uczę się programować od ponad roku i z dnia na dzień rozwijam
               swoje umiejętności. Programowanie stało się moją pasją, a każdy
               nowy dzień to okazja do nauki czegoś nowego. Moje główne obszary
@@ -166,7 +179,7 @@ function Main() {
               dodaje kreatywności i różnorodności do mojego życia. Chciałbym Cię
               zachęcić do przeglądania moich projektów i dołączenia do mnie w
               podróży przez świat programowania.
-            </p>
+            </animated.p>
           </div>
         </div>
       </section>
@@ -180,19 +193,27 @@ function Main() {
             <div key={project.id} className={css.mainCard}>
               <div className={css.mainInfo}>
                 {project.image && <project.image />}
-                <h2>{project.title}</h2>
-                <span>
-                  <p className={css.title}>{project.titleDescription}</p>
+                <animated.h2 style={{ opacity: scrollYProgress }}>
+                  {project.title}
+                </animated.h2>
+                <animated.span style={{ opacity: scrollYProgress }}>
+                  <animated.p
+                    style={{ opacity: scrollYProgress }}
+                    className={css.title}
+                  >
+                    {project.titleDescription}
+                  </animated.p>
                   {project.description}
-                </span>
-                <a
+                </animated.span>
+                <animated.a
+                  style={{ opacity: scrollYProgress }}
                   href={project.link}
                   className={css.mainButton}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Click Me
-                </a>
+                </animated.a>
               </div>
             </div>
           ))}
