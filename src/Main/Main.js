@@ -1,4 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { useScroll, animated } from '@react-spring/web';
 import Slider from 'react-slick';
 import css from './Main.module.css';
@@ -13,7 +15,12 @@ import { ReactComponent as Search } from '../image/search.svg';
 function Main() {
   const [isModalOpenContact, setIsModalOpenContact] = useState(false);
   const { scrollYProgress } = useScroll();
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
   const slider = useRef(null);
+  const projectsPerSlide = 8;
+  const currentSlide = useState(0)[0];
+
   const settings = {
     dots: true,
     infinite: true,
@@ -132,56 +139,75 @@ function Main() {
     },
   ];
 
-  const projectsPerSlide = 8;
-  const currentSlide = useState(0)[0];
-
   const displayProjects = projects.slice(
     currentSlide * projectsPerSlide,
     (currentSlide + 1) * projectsPerSlide
   );
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        x: 0,
+        scale: 1,
+        transition: {
+          type: 'spring',
+          stiffness: 200,
+          damping: 30,
+        },
+      });
+    }
+  }, [controls, inView]);
 
   return (
     <div id="about">
       <section id={css.about}>
         <div className={css.mainHeader}>
           <h2>About Me</h2>
-          <button
-            className={`${css.mainButton} ${css.btnAnimation}`}
-            id={css.hireme}
-            onClick={openModalContact}
+          <motion.div
+            ref={ref}
+            initial={{ x: 200, scale: 1 }}
+            animate={controls}
           >
-            Hire Me
-          </button>
+            <button
+              className={`${css.mainButton} ${css.btnAnimation}`}
+              id={css.hireme}
+              onClick={openModalContact}
+            >
+              Hire Me
+            </button>
+          </motion.div>
         </div>
+        <motion.div
+          ref={ref}
+          initial={{ x: -200, scale: 1 }}
+          animate={controls}
+        >
+          <div className={css.mainCard}>
+            <img src={photo} alt="zdjęcie z CV" />
 
-        <div className={css.mainCard}>
-          <img src={photo} alt="zdjęcie z CV" />
-          <div className={css.mainInfo}>
-            <animated.h2
-              style={{
-                opacity: scrollYProgress,
-              }}
-            >
-              Cześć, jestem Michał
-            </animated.h2>
-            <animated.p
-              style={{
-                opacity: scrollYProgress,
-              }}
-            >
-              Uczę się programować od ponad roku i z dnia na dzień rozwijam
-              swoje umiejętności. Programowanie stało się moją pasją, a każdy
-              nowy dzień to okazja do nauki czegoś nowego. Moje główne obszary
-              zainteresowań to front-end web development oraz tworzenie połączeń
-              między front-endem a backendem. Jestem zmotywowany, aby stać się
-              ekspertem w dziedzinie programowania i tworzyć innowacyjne
-              rozwiązania. Oprócz kodowania, interesuj się sportem, e-sportem co
-              dodaje kreatywności i różnorodności do mojego życia. Chciałbym Cię
-              zachęcić do przeglądania moich projektów i dołączenia do mnie w
-              podróży przez świat programowania.
-            </animated.p>
+            <div className={css.mainInfo}>
+              <animated.h2
+                style={{
+                  opacity: scrollYProgress,
+                }}
+              >
+                Cześć, jestem Michał
+              </animated.h2>
+              <animated.p
+                style={{
+                  opacity: scrollYProgress,
+                }}
+              >
+                Chciałbym się z Tobą podzielić moją zajawką do programowania,
+                ale także zaznaczyć, że nie ograniczam się tylko do tego. Po
+                godzinach to też sport, e-sport, i generalnie wszystko, co
+                dodaje trochę pazura do mojego życia. Zapraszam Cię na wycieczkę
+                po moich projektach - być może odkryjesz, że programowanie to
+                nie tylko sztywne linie kodu, ale też trochę magii i luzu! 😎✨
+              </animated.p>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </section>
       <section id={css.features}>
         <div className={css.mainHeader}>
