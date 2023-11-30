@@ -2,19 +2,19 @@ import React from 'react';
 import { ReactComponent as Arrow } from '../image/icons.svg#arrowheader';
 import css from '../Header/Header.module.css';
 import back from '../image/back.mp4';
-import { useSpring, animated, config } from '@react-spring/web';
+import { useSpring, animated } from '@react-spring/web';
 
 function Header() {
   const nameSpring = useSpring({
     from: { opacity: 0, transform: 'translateX(100%)' },
     to: { opacity: 1, transform: 'translateX(0%)' },
-    config: config.slow,
+    config: { duration: 1000 },
   });
 
   const subtitleSpring = useSpring({
     from: { opacity: 0, transform: 'translateX(100%)' },
     to: { opacity: 1, transform: 'translateX(0%)' },
-    config: config.slow,
+    config: { duration: 1000 },
     delay: 500,
   });
   return (
