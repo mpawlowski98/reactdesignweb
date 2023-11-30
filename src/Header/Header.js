@@ -21,7 +21,7 @@ function Header() {
     <header>
       <div id="particles-container"></div>
       <div className={css.videobackground}>
-        <video autoPlay loop muted>
+        <video autoPlay loop muted playbackRate={0.5}>
           <source src={back} type="video/mp4" />
         </video>
 

@@ -47,6 +47,7 @@ header .headerTitle h1 {
   font-weight: 500;
   font-family: 'Ubuntu';
   text-align: center;
+  color: #fff;
 }
 
 header .headerTitle h3 {
